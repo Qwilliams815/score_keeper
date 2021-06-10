@@ -1,0 +1,177 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.top-box {
+    display: flex;
+    flex-direction: column;
+    border: solid 5px white;
+    border-bottom: solid 2.5px white;
+    border-radius: 25px;
+    flex: 1;
+    background-color: #ed3430;
+}
+
+.top-box-upper {
+    flex:.3;
+}
+.top-box-lower {
+    flex: .7;
+}
+
+.score {
+    top: 40%;
+    font-size: 90px;
+    vertical-align: middle;
+}
+
+
+.middle-box {
+    display: none;
+    justify-content: space-around;
+    width: 100vw;
+}
+
+#menu {
+    position: absolute;
+    z-index: 1;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    height: 50px;
+    width: 50px;
+    border: solid 5px white;
+    border-radius: 50%;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.menu-burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+  }
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.box {
+  height: 8px;
+  width: 100%;
+  border-radius: 3px;
+  background-color: black;
+}
+
+#menu:hover .box {
+  border: solid .5px white;
+}
+
+
+input[type=checkbox] {
+    appearance: none;
+    position: absolute;
+    z-index: 2;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    border: solid 5px;
+    border-radius: 50%;
+    opacity: 0;
+
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+input[type=checkbox]:checked ~ .middle-box {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+
+
+#reset-button {
+    appearance: none;
+    height: 50px;
+    flex: 1;
+
+}
+
+#undo-button {
+    height: 50px;
+    flex: 1;
+}
+
+
+.bottom-box {
+    border: solid 5px white;
+    border-top: solid 2.5px white;
+    flex: 1;
+    background-color: #154478;
+    border-radius: 25px;
+}
+
+.bottom-box-upper {
+    flex:.3;
+}
+.bottom-box-lower {
+    flex: .7;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background: transparent;
+    border-bottom: solid 3px transparent;
+    border-radius: 30px;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+    
+    font-size: 80px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: white;
+  }
+  
+  input[type=text]:focus {
+    border-bottom: 10px solid white;
+  }
+
+  ::placeholder {
+      color: rgba(255, 255, 255, 0.507);
+  }
+
+  .score {
+      color: white;
+  }
