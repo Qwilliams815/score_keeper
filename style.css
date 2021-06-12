@@ -11,6 +11,50 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+.switch-servers-modal {
+    visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    max-width: px;
+    border: solid;
+}
+.test {
+    background: yellow;
+}
+
+.switch-modal-active {
+    visibility: visible;
+}
+
+.switch-servers-wrapper {
+    border: solid;
+    height: 210px;
+    width: 320px;
+    text-align: center;
+    vertical-align: middle;
+    background: white;
+    border-radius: 25px;
+}
+
+.switch-servers-wrapper h1 {
+    top: 50px;
+    bottom: 50px;
+}
+
+#switch-servers-button {
+    font-weight: bold;
+    top: 30px;
+    height: 40px;
+    width: 60px;
+    border: solid;
+    border-radius: 25px;
+}
+
 .top-box {
     z-index: 1;
     display: flex;
@@ -55,7 +99,6 @@ body {
     width: 50px;
     border: solid 5px white;
     border-radius: 50%;
-
     text-align: center;
     vertical-align: middle;
 }
@@ -78,6 +121,7 @@ body {
   flex-direction: column;
   align-items: center;
   }
+
 
 .box {
   height: 8px;
@@ -114,15 +158,26 @@ input[type=checkbox]:checked + .middle-box {
 
 .button {
     position: absolute;
-    height: 50px;
-    width: 50px;
+    height: 60px;
+    width: 60px;
 }
 
 .reset-button {
+    border: none;
     top: 55%;
     left: 30%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+    border-radius: 50%;
+    background: white;
+}
+
+.reset-button img {
+    height: 50px;
+    width: 50px;
+    top: 54%;
+    left: 46%;
+    transform: translate(-50%, -50%);
 }
 
 input[type=checkbox]:checked ~ .reset-button {
@@ -132,10 +187,21 @@ input[type=checkbox]:checked ~ .reset-button {
 }
 
 .color-button {
+    border: none;
     top: 45%;
     left: 70%;
     transform: translate(-50%, -50%);
     transition: .3s ease;
+    border-radius: 50%;
+    background: white;
+}
+
+.color-button img {
+    height: 50px;
+    width: 50px;
+    top: 54%;
+    left: 46%;
+    transform: translate(-50%, -50%);
 }
 
 input[type=checkbox]:checked ~ .color-button {

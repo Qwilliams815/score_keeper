@@ -9,9 +9,16 @@
 </head>
 
 <body>
+    <div class="switch-servers-modal">
+        <div class="switch-servers-wrapper">
+            <h1>
+                Switch Servers
+                <button onclick="yessirButtonHandler()" id="switch-servers-button">Yessir!</button>
+            </h1>
+            
+        </div>
+    </div>
 
-    
-    
     <div class="top-box" id="top-box">
         <div class="top-box-upper">
             <input type="text" name="top-name" placeholder="Name">
@@ -23,8 +30,12 @@
     
     <input type="checkbox">
     <div class="middle-box"></div>
-    <button class="button reset-button" onclick="resetScore()">Reset</button>
-    <button class="button color-button" onclick="showColors()">Color</button>
+    <button class="button reset-button" onclick="resetScore()">
+        <img class=".reset-button-img" src="/resources/arrow-clockwise.svg" alt="reset">
+    </button>
+    <button class="button color-button" onclick="showColors()">
+        <img class =".color-button-img" src="/resources/paint-bucket.svg" alt="color">
+    </button>
 
     <div id="menu">
         <div class="menu-burger">
@@ -48,9 +59,9 @@
 
     <div class="color-window">
         <div class="top-color-buttons">
-            <button class="red top button-color" id="red-top" onclick="colorChangeTopRed()">Red</button>
-            <button class="green top button-color" id="green-top" onclick="colorChangeTopGreen()">Green</button>
-            <button class="blue top button-color" id="blue-top" onclick="colorChangeTopBlue()">Blue</button>
+            <button class="red top button-color" id="red-top" onclick="colorChangeTopRed()"></button>
+            <button class="green top button-color" id="green-top" onclick="colorChangeTopGreen()"></button>
+            <button class="blue top button-color" id="blue-top" onclick="colorChangeTopBlue()"></button>
         </div>
 
         <div class="middle-x">
@@ -60,9 +71,9 @@
         </div>
 
         <div class="bottom-color-buttons">
-            <button class="red bottom button-color" id="red-bottom" onclick="colorChangeBottomRed()">Red</button>
-            <button class="green bottom button-color" id="green-bottom" onclick="colorChangeBottomGreen()">Green</button>
-            <button class="blue bottom button-color" id="blue-bottom" onclick="colorChangeBottomBlue()">Blue</button>
+            <button class="red bottom button-color" id="red-bottom" onclick="colorChangeBottomRed()"></button>
+            <button class="green bottom button-color" id="green-bottom" onclick="colorChangeBottomGreen()"></button>
+            <button class="blue bottom button-color" id="blue-bottom" onclick="colorChangeBottomBlue()"></button>
         </div>
     </div>
 
