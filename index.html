@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     
 </head>
 
@@ -13,7 +12,7 @@
 
     
     
-    <div class="top-box">
+    <div class="top-box" id="top-box">
         <div class="top-box-upper">
             <input type="text" name="top-name" placeholder="Name">
         </div>
@@ -38,7 +37,7 @@
     </div>
 
 
-    <div class="bottom-box">
+    <div class="bottom-box" id="bottom-box">
         <div class="bottom-box-upper">
             <input type="text" name="bottom-name" placeholder="Name">
         </div>
@@ -49,16 +48,24 @@
 
     <div class="color-window">
         <div class="top-color-buttons">
-            <button class="red top button-color" onclick="test()">Red</button>
-            <button class="green top button-color">Green</button>
-            <button class="blue top button-color">Blue</button>
+            <button class="red top button-color" id="red-top" onclick="colorChangeTopRed()">Red</button>
+            <button class="green top button-color" id="green-top" onclick="colorChangeTopGreen()">Green</button>
+            <button class="blue top button-color" id="blue-top" onclick="colorChangeTopBlue()">Blue</button>
         </div>
+
+        <div class="middle-x">
+            <button class="exit-button" onclick="exit()">
+                <img src="resources/x-circle.svg" alt="Exit">
+            </button>
+        </div>
+
         <div class="bottom-color-buttons">
-            <button class="red bottom button-color">Red</button>
-            <button class="green bottom button-color">Green</button>
-            <button class="blue bottom button-color">Blue</button>
+            <button class="red bottom button-color" id="red-bottom" onclick="colorChangeBottomRed()">Red</button>
+            <button class="green bottom button-color" id="green-bottom" onclick="colorChangeBottomGreen()">Green</button>
+            <button class="blue bottom button-color" id="blue-bottom" onclick="colorChangeBottomBlue()">Blue</button>
         </div>
     </div>
 
+    <script src="script.js"></script>
 </body>
 </html>

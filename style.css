@@ -143,11 +143,12 @@ input[type=checkbox]:checked ~ .color-button {
     top: 50%;
 }
 
-
 .bottom-box {
+    display: flex;
     border: solid 5px white;
     border-top: solid 2.5px white;
     flex: 1;
+    flex-direction: column;
     background-color: #154478;
     border-radius: 25px;
 }
@@ -189,9 +190,8 @@ input[type=text]:focus {
     color: white;
 }
 
-.button:
 .color-window {
-    z-index: 1;
+    z-index: 2;
     display: flex;
     position: absolute;
     visibility: hidden;
@@ -209,12 +209,32 @@ input[type=text]:focus {
     flex-direction: column;
 }
 
+.color-window-active {
+    visibility: visible;
+}
+
 .top-color-buttons {
     padding: 10px;
     display: flex;
     justify-content: space-evenly;
     flex: 1;
     align-items: flex-start;
+}
+
+.middle-x img {
+    height: 50px;
+    width: auto;
+}
+
+.exit-button {
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    transform: translate(-50%, -50%);
+    border: none;
+    background: white;
+    border-radius: 50%;
 }
 
 .bottom-color-buttons {
@@ -229,5 +249,17 @@ input[type=text]:focus {
     height: 50px;
     width: 50px;
     border: solid;
+    border-radius: 50%;
+}
 
+.red {
+    background: #ed3430;
+}
+
+.blue {
+    background: #154478;
+}
+
+.green {
+    background: #01c756;
 }
