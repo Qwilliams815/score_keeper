@@ -15,20 +15,19 @@
                 Switch Servers
                 <button onclick="yessirButtonHandler()" id="switch-servers-button">Yessir!</button>
             </h1>
-            
         </div>
     </div>
 
     <div class="top-box" id="top-box">
         <div class="top-box-upper">
-            <input type="text" name="top-name" placeholder="Name">
+            <input onsubmit="focus" type="text" name="top-name" placeholder="Name">
         </div>
         <div class="top-box-lower" onclick="topClickHandler()">
             <center><h1 id="top-score" class="score" >0</h1></center>
         </div>
     </div>
     
-    <input type="checkbox">
+    <input type="checkbox" class="menu-checkbox">
     <div class="middle-box"></div>
     <button class="button reset-button" onclick="resetScore()">
         <img class=".reset-button-img" src="/resources/arrow-clockwise.svg" alt="reset">

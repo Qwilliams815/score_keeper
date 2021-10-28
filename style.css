@@ -21,7 +21,6 @@ body {
     height: 100%;
     width: 100%;
     max-width: px;
-    border: solid;
 }
 .test {
     background: yellow;
@@ -55,6 +54,10 @@ body {
     border-radius: 25px;
 }
 
+#switch-servers-button:hover {
+    cursor: pointer;
+}
+
 .top-box {
     z-index: 1;
     display: flex;
@@ -77,6 +80,11 @@ body {
     top: 40%;
     font-size: 90px;
     vertical-align: middle;
+}
+
+.score:hover, .menu-checkbox:hover {
+    cursor: pointer;
+    user-select: none;
 }
 
 
