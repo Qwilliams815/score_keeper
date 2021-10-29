@@ -1,5 +1,3 @@
-/* test */
-
 * {
     margin: 0px;
     padding: 0px;
@@ -56,7 +54,7 @@ body {
     border-radius: 25px;
 }
 
-#switch-servers-button:hover {
+#switch-servers-button:hover, button:hover {
     cursor: pointer;
 }
 
