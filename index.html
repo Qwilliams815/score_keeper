@@ -9,70 +9,125 @@
 </head>
 
 <body>
-    <div class="switch-servers-modal">
-        <div class="switch-servers-wrapper">
-            <h1>
-                Switch Servers
-                <button onclick="yessirButtonHandler()" id="switch-servers-button">Yessir!</button>
-            </h1>
-        </div>
-    </div>
-
-    <div class="top-box" id="top-box">
-        <div class="top-box-upper">
-            <input onsubmit="focus" type="text" name="top-name" placeholder="Name">
-        </div>
-        <div class="top-box-lower" onclick="topClickHandler()">
-            <center><h1 id="top-score" class="score" >0</h1></center>
+    <div class="victory-modal modal-wrapper">
+        <div class="modal">
+            <h1>Victory!</h1>
+            <button onclick="victoryButtonHandler()" class="modal-button" id="victory-button">Yessir!</button>
         </div>
     </div>
     
-    <input type="checkbox" class="menu-checkbox">
-    <div class="middle-box"></div>
-    <button class="button reset-button" onclick="resetScore()">
-        <img class=".reset-button-img" src="resources/arrow-clockwise.svg" alt="reset">
-    </button>
-    <button class="button color-button" onclick="showColors()">
-        <img class =".color-button-img" src="resources/paint-bucket.svg" alt="color">
-    </button>
+    <div class="switch-servers-modal modal-wrapper">
+        <div class="modal">
+            <h1>Switch Servers</h1>
+            <button onclick="yessirButtonHandler()" class="modal-button" id="switch-servers-button">Yessir!</button>
+        </div>
+    </div>
 
-    <div id="menu">
-        <div class="menu-burger">
-            <div class="container">
-                <div class="box"></div>
-                <div class="box"></div>
-                <div class="box"></div>
+    <div class="view">
+        <div class="track">
+            <div class="main-page">
+                <div class="top-box" id="top-box">
+                    <div class="top-box-upper">
+                        <input onsubmit="focus" type="text" name="top-name" placeholder="Name">
+                    </div>
+                    <div class="top-box-lower" onclick="topClickHandler()">
+                        <center><h1 id="top-score" class="score" >0</h1></center>
+                    </div>
+                </div>
+                
+                <input type="checkbox" class="menu-checkbox">
+                <div id="menu">
+                    <div class="menu-burger">
+                        <div class="container">
+                            <div class="box"></div>
+                            <div class="box"></div>
+                            <div class="box"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="middle-box"> 
+                    <button class="button reset-button" onclick="resetScore()">
+                        <img class=".reset-button-img" src="resources/arrow-clockwise.svg" alt="reset">
+                    </button>
+                    
+                    <button class="button undo-button" onclick="undo()">
+                        <img src="resources/arrow-bar-left.svg" alt="Undo" class="undo-button-img">
+                    </button>
+                 
+                    <button class="button color-button" onclick="showColors()">
+                        <img class =".color-button-img" src="resources/paint-bucket.svg" alt="color">
+                    </button>
+                    
+                    <button class="button settings-button" onclick="moveRight()">
+                        <img src="resources/gear.svg" alt="" class="settings-button-img">
+                    </button> 
+                </div>
+
+                <div class="bottom-box" id="bottom-box">
+                    <h2 class="countdown-number">5</h2>
+                    <div class="bottom-box-upper">
+                        <input type="text" name="bottom-name" placeholder="Name">
+                    </div>
+                    <div class="bottom-box-lower" onclick="bottomClickHandler()">
+                        <center><h1 id="bottom-score" class="score" >0</h1></center>
+                    </div>
+                </div>
+            
+                <div class="color-window">
+                    <div class="top-color-buttons">
+                        <button class="red top button-color" id="red-top" onclick="changeColorTop('#ed3430')"></button>
+                        <button class="green top button-color" id="green-top" onclick="changeColorTop('#01c756')"></button>
+                        <button class="blue top button-color" id="blue-top" onclick="changeColorTop('#154478')"></button>
+                    </div>
+            
+                    <div class="middle-x">
+                        <button class="exit-button" onclick="exit()">
+                            <img src="resources/x-circle.svg" alt="Exit">
+                        </button>
+                    </div>
+            
+                    <div class="bottom-color-buttons">
+                        <button class="red bottom button-color" id="red-bottom" onclick="changeColorBottom('#ed3430')"></button>
+                        <button class="green bottom button-color" id="green-bottom" onclick="changeColorBottom('#01c756')"></button>
+                        <button class="blue bottom button-color" id="blue-bottom" onclick="changeColorBottom('#154478')"></button>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
-
-    <div class="bottom-box" id="bottom-box">
-        <div class="bottom-box-upper">
-            <input type="text" name="bottom-name" placeholder="Name">
-        </div>
-        <div class="bottom-box-lower" onclick="bottomClickHandler()">
-            <center><h1 id="bottom-score" class="score" >0</h1></center>
-        </div>
-    </div>
-
-    <div class="color-window">
-        <div class="top-color-buttons">
-            <button class="red top button-color" id="red-top" onclick="colorChangeTopRed()"></button>
-            <button class="green top button-color" id="green-top" onclick="colorChangeTopGreen()"></button>
-            <button class="blue top button-color" id="blue-top" onclick="colorChangeTopBlue()"></button>
-        </div>
-
-        <div class="middle-x">
-            <button class="exit-button" onclick="exit()">
-                <img src="resources/x-circle.svg" alt="Exit">
-            </button>
-        </div>
-
-        <div class="bottom-color-buttons">
-            <button class="red bottom button-color" id="red-bottom" onclick="colorChangeBottomRed()"></button>
-            <button class="green bottom button-color" id="green-bottom" onclick="colorChangeBottomGreen()"></button>
-            <button class="blue bottom button-color" id="blue-bottom" onclick="colorChangeBottomBlue()"></button>
+            <div class="settings-page">
+                <div class="settings">
+                    <div class="settings-header">
+                        <button class="back-button" onclick="moveLeft()">
+                            <img src="resources/arrow-left.svg" alt="">
+                        </button>
+                        <h1>Settings</h1>
+                    </div>
+                    <div class="settings-list">
+                        <div class="setting">
+                            <h2>Score Limit</h2>
+                            <input class="score-limit-input" value="21" type="number" onfocusout="setScoreLimit(value)">
+                        </div>
+                        <div class="setting">
+                            <h2>Point Increment</h2>
+                            <input class="point-inc-input" value="1" type="number" onfocusout="setPointInc(value)">
+                        </div>
+                        <div class="setting">
+                            <h2>Number of Serves</h2>
+                            <input class="point-trigger-input" value="5" type="number" onfocusout="setPointTrigger(value)">
+                        </div>
+                        <div class="setting">
+                            <h2>Switch Server Modal</h2>
+                            <input type="checkbox" class="modal-toggle" onchange="toggleSwitchModal()" checked>
+                        </div>
+                        <div class="dark-mode-setting setting">
+                            <h2>Dark Mode</h2>
+                            <input type="checkbox" class="dark-mode-toggle" onchange="toggleDarkMode()">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 

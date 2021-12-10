@@ -1,18 +1,12 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
     position: relative;
-}
-
-body {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.switch-servers-modal {
-    visibility: hidden;
+.modal-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,42 +14,67 @@ body {
     z-index: 3;
     height: 100%;
     width: 100%;
-    max-width: px;
-}
-.test {
-    background: yellow;
 }
 
-.switch-modal-active {
-    visibility: visible;
-}
-
-.switch-servers-wrapper {
+.modal {
     border: solid;
     height: 210px;
     width: 320px;
-    text-align: center;
-    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background: white;
+    box-shadow: 0 0px 30px 5px rgb(0 0 0 / 55%);
     border-radius: 25px;
 }
 
-.switch-servers-wrapper h1 {
-    top: 50px;
-    bottom: 50px;
+.switch-servers-modal {
+    visibility: hidden;
 }
 
-#switch-servers-button {
+.victory-modal {
+    visibility: hidden;
+}
+
+.modal-button {
     font-weight: bold;
     top: 30px;
     height: 40px;
-    width: 60px;
+    width: 80px;
     border: solid;
     border-radius: 25px;
 }
 
-#switch-servers-button:hover, button:hover {
+.modal-button:hover, button:hover {
     cursor: pointer;
+}
+
+.modal-active {
+    visibility: visible;
+}
+
+.view {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.track {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    transition: .6s;
+}
+
+.main-page {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    min-width: 100%;
 }
 
 .top-box {
@@ -63,7 +82,6 @@ body {
     display: flex;
     flex-direction: column;
     border: solid 5px white;
-    border-bottom: solid 2.5px white;
     border-radius: 25px;
     flex: 1;
     background-color: #ed3430;
@@ -87,26 +105,36 @@ body {
     user-select: none;
 }
 
-
 .middle-box {
-    justify-content: space-around;
-    width: 100vw;
+    margin: auto;
+    position: relative;
+    display: flex;
+    width: 80vw;
+    max-width: 500px;
+    justify-content: space-evenly;
+    align-items: center;
     flex: 0;
-    transition: flex .4s ease;
+    /* transition: flex .4s ease; */
+    transition: .3s ease;
+    transform: scale(5);
+    /* top: 50px; */
 }
 
 #menu {
-    position: absolute;
     z-index: 1;
-    margin: 0;
+    position: absolute;
+    /* margin: 0; */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background: white;
+    border-radius: 50%;
     height: 50px;
     width: 50px;
     border: solid 5px white;
-    border-radius: 50%;
     text-align: center;
     vertical-align: middle;
 }
@@ -118,8 +146,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    
-  }
+}
 
 .container {
   display: flex;
@@ -130,7 +157,6 @@ body {
   align-items: center;
   }
 
-
 .box {
   height: 8px;
   width: 100%;
@@ -139,14 +165,13 @@ body {
 }
 
 /* Invisible checkbox laying over menu burger */
-input[type=checkbox] {
-    appearance: none;
+.menu-checkbox {
+    /* appearance: none; */
     position: absolute;
     z-index: 2;
-    margin: 0;
+    transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     height: 50px;
     width: 50px;
     border: solid 5px;
@@ -157,70 +182,48 @@ input[type=checkbox] {
     vertical-align: middle;
 }
 
-input[type=checkbox]:checked + .middle-box {
-    transition: transform;
-    transition: flex .4s ease;
+.menu-checkbox:checked ~ .middle-box {
     flex: 1;
-    align-items: center;
+    transform: scale(1);
+    transition: .3s ease;
 }
 
 .button {
     position: absolute;
-    height: 60px;
-    width: 60px;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    top: -30px;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    background: none;
+    border: none;
+}
+
+img {
+    height: 50px;
+    width: 50px;
 }
 
 .reset-button {
-    border: none;
-    top: 55%;
-    left: 30%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-    border-radius: 50%;
-    background: white;
+    left: 0;
 }
 
-.reset-button img {
-    height: 50px;
-    width: 50px;
-    top: 54%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-}
-
-input[type=checkbox]:checked ~ .reset-button {
-    transition: .3s ease;
-    top: 50%;
-
+.undo-button {
+    left: 25%;
 }
 
 .color-button {
-    border: none;
-    top: 45%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-    transition: .3s ease;
-    border-radius: 50%;
-    background: white;
+    left: 75%;
 }
 
-.color-button img {
-    height: 50px;
-    width: 50px;
-    top: 54%;
-    left: 46%;
-    transform: translate(-50%, -50%);
-}
-
-input[type=checkbox]:checked ~ .color-button {
-    transition: .3s ease;
-    top: 50%;
+.settings-button {
+    left: 100%;
 }
 
 .bottom-box {
     display: flex;
     border: solid 5px white;
-    border-top: solid 2.5px white;
     flex: 1;
     flex-direction: column;
     background-color: #154478;
@@ -230,8 +233,23 @@ input[type=checkbox]:checked ~ .color-button {
 .bottom-box-upper {
     flex:.3;
 }
+
 .bottom-box-lower {
+    position: relative;
     flex: .7;
+}
+
+.countdown-number {
+    padding: 7px;
+    min-height: 35px;
+    min-width: 45px;
+    font-size: 26px;
+    position: absolute;
+    text-align: center;
+    bottom: 15px;
+    right: 15px;
+    background: white;
+    border-radius: 50%;
 }
 
 input[type=text] {
@@ -267,6 +285,7 @@ input[type=text]:focus {
 .color-window {
     z-index: 2;
     display: flex;
+    flex-direction: column;
     position: absolute;
     visibility: hidden;
     left: 20vw;
@@ -279,8 +298,7 @@ input[type=text]:focus {
     border: solid;
     border-radius: 25px;
     background: white;
-
-    flex-direction: column;
+    box-shadow: 0 0px 30px 5px rgb(0 0 0 / 55%);
 }
 
 .color-window-active {
@@ -336,4 +354,103 @@ input[type=text]:focus {
 
 .green {
     background: #01c756;
+}
+
+.settings-page {    
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.settings {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 95%;
+    max-width: 800px;
+    width: 95%;
+    margin: auto;
+    background: rgb(206, 205, 205);
+    border: 5px solid;
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.settings-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25%;
+    max-height: 150px;
+    background: rgb(98, 98, 98);
+}
+
+.back-button {
+    display: flex;
+    justify-content: start;
+    padding-left: 20px;
+    flex: .7;
+    background: none;
+    border: none;
+}
+
+.settings-header h1 {
+    background: white;
+    margin: 25px;
+    border: solid;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    flex: 2;
+    font-size: 40px;
+    padding: 15px;
+}
+
+.settings-list {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.setting {
+    display: flex;
+    align-items: center;
+    border-bottom: 3px solid black;
+    padding: 15px;
+}
+
+.setting h2 {
+    flex: 1;
+}
+
+.setting input{
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    height: 50px;
+    width: 100px;
+    border: solid;
+    border-radius: 15px;
+}
+
+.dark-mode-setting {
+    border: none;
+}
+
+.dark-1 {
+    background: #393939;
+}
+
+.dark-2 {
+    background: #838383;
+}
+
+.dark-font {
+    color: white;
+}
+
+.modal-toggle {
+    height: 50px;
+    width: 50px;
 }
