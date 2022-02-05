@@ -1,12 +1,13 @@
-### Lightweight score keeper webapp
+###Score keeper webapp
 
 # Description -
-Simple score keeping webapp featuring name and color customization.
+Simple score keeping webapp featuring name, settings, and color customization.
 
 # Purpose -
-Built to help settle tennis-related point disputes between me and my cheating brothers. Every 5 points, a prompt modal reminds the user (referee) to "switch servers". No, these are not the official rules of tennis, yes, we are amatures.
+Built to help settle tennis-related point disputes between me and my cheating brothers. Newly updated version includes a Settings page for further point goal, point increment, modal, and darkmode customization.
 
 # What I Learned -
 - Modal functionality.
 - basic CSS animation.
 - Basic DOM traversal.
+- Input behaviors.
