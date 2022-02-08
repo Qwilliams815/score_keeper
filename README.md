@@ -7,6 +7,7 @@ Simple score keeping webapp featuring name, settings, and color customization.
 Built to help settle tennis-related point disputes between me and my cheating brothers. Newly updated version includes a Settings page for further point goal, point increment, modal, and darkmode customization.
 
 # What I Learned -
+- PWA functionality/ best practices.
 - Modal functionality.
 - basic CSS animation.
 - Basic DOM traversal.
