@@ -3,47 +3,31 @@
     "short_name": "Score Keeper",
     "icons": [
       {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "72x72",
-        "type": "image/svg"
-      },
-      {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "96x96",
-        "type": "image/svg"
-      },
-      {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "128x128",
-        "type": "image/svg"
-      },
-      {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "144x144",
-        "type": "image/svg"
-      },
-      {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "152x152",
-        "type": "image/svg"
-      },
-      {
-        "src": "resources/icons/app-thumbnail.svg",
+        "src": "icons/manifest-icon-192.maskable.png",
         "sizes": "192x192",
-        "type": "image/svg"
+        "type": "image/png",
+        "purpose": "any"
       },
       {
-        "src": "resources/icons/app-thumbnail.svg",
-        "sizes": "384x384",
-        "type": "image/svg"
+        "src": "icons/manifest-icon-192.maskable.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "maskable"
       },
       {
-        "src": "resources/icons/app-thumbnail.svg",
+        "src": "icons/manifest-icon-512.maskable.png",
         "sizes": "512x512",
-        "type": "image/svg"
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "icons/manifest-icon-512.maskable.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "maskable"
       }
     ],
-    "start_url": "/index.html",
+    "start_url": "index.html",
     "display": "standalone",
     "background_color": "#000",
     "theme_color": "#ffff00"

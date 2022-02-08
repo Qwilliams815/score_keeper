@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Score Keeper</title>
+    <meta name="description" content="Simple score keeping PWA featuring name, settings, and color customization.">
+    <link rel="apple-touch-icon" href="apple_touch_icon_192x192.png">
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json" />
     <meta name="theme-color" content="#333" />
-    <link rel="stylesheet" href="style.css">
     
 </head>
 
@@ -49,20 +51,20 @@
                 </div>
 
                 <div class="middle-box"> 
-                    <button class="button reset-button" onclick="resetScore()">
+                    <button class="button reset-button" onclick="resetScore()" aria-label="Reset">
                         <img class=".reset-button-img" src="resources/arrow-clockwise.svg" alt="reset">
                     </button>
                     
-                    <button class="button undo-button" onclick="undo()">
-                        <img src="resources/arrow-bar-left.svg" alt="Undo" class="undo-button-img">
+                    <button class="button undo-button" onclick="undo()" aria-label="Undo">
+                        <img class="undo-button-img" src="resources/arrow-bar-left.svg" alt="Undo">
                     </button>
                  
-                    <button class="button color-button" onclick="showColors()">
+                    <button class="button color-button" onclick="showColors()" aria-label="Colors">
                         <img class =".color-button-img" src="resources/paint-bucket.svg" alt="color">
                     </button>
                     
-                    <button class="button settings-button" onclick="moveRight()">
-                        <img src="resources/gear.svg" alt="" class="settings-button-img">
+                    <button class="button settings-button" onclick="moveRight()" aria-label="Settings">
+                        <img class="settings-button-img" src="resources/gear.svg" alt="settings">
                     </button> 
                 </div>
 
@@ -100,7 +102,7 @@
             <div class="settings-page">
                 <div class="settings">
                     <div class="settings-header">
-                        <button class="back-button" onclick="moveLeft()">
+                        <button class="back-button" onclick="moveLeft()" aria-label="Back">
                             <img src="resources/arrow-left.svg" alt="">
                         </button>
                         <h1>Settings</h1>
