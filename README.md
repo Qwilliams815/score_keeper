@@ -1,4 +1,4 @@
-###Score keeper webapp
+### Score keeper webapp
 
 # Description -
 Simple score keeping webapp featuring name, settings, and color customization.
